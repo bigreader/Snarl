@@ -35,7 +35,7 @@ function energy(layout) { //TODO: add temp
 	energy += stats.conflicts * 10;
 	energy += stats.empty * 1;
 	// energy += stats.height + stats.width * 10;
-	energy += Math.abs(stats.height - stats.width/2) * 1;
+	energy += Math.abs(stats.height - stats.width) * 1;
 
 	if (!stats.ink) {
 		stats.ink = 0;

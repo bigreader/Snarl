@@ -7,7 +7,7 @@ function Layout(src) {
 		this.phrase = transcribe.normalize(src);
 		this.words = transcribe.words(src);
 		this.words.forEach(word => {
-			word.x = 4;
+			word.x = 0;
 			word.y = 0;
 		});
 		this.words[0].x = 0;

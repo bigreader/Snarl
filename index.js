@@ -2,18 +2,6 @@ var inquirer   = require('inquirer');
 var anneal     = require('./anneal.js');
 var transcribe = require('./transcribe.js');
 
-var result = anneal('test', {
-	phrase: 'test',
-	temp: 1.5,
-	ratio: 1
-});
-console.log(result.prettyStats());
-result.print('linearWide');
-
-return;
-
-
-
 inquirer.prompt([
 {
 	name: 'phrase',
@@ -44,7 +32,7 @@ inquirer.prompt([
 
 	var result = anneal(answers.phrase, answers);
 	console.log(result.prettyStats());
-	result.print('linearLight');
+	result.print('linearWide');
 
 	result.words.forEach(word => console.log(word.text, JSON.stringify(word.runs)));
 }).catch(err => { throw err });
