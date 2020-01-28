@@ -6,10 +6,13 @@ var diff = differ();
 diff.pipe(process.stdout);
 
 var tempStart;
+var options;
 
-function anneal(phrase, options) {
+function anneal(phrase, newOptions) {
 
 	var initial = new Layout(phrase);
+
+	options = newOptions;
 
 	var result = simulatedAnnealing({
 		initialState: initial,
